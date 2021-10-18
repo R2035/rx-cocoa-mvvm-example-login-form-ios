@@ -100,6 +100,7 @@
 			buildPhases = (
 				DC2C3FC951BEC536441C2CCF /* [CP] Check Pods Manifest.lock */,
 				8E7BF09D271E3D9F008D0F3B /* SwiftFormat */,
+				8E7BF09E271E3DDA008D0F3B /* SwiftLint */,
 				8ED54350271E369E00BB02D5 /* Sources */,
 				8ED54351271E369E00BB02D5 /* Frameworks */,
 				8ED54352271E369E00BB02D5 /* Resources */,
@@ -178,6 +179,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat --verbose \"$PROJECT_DIR/$TARGET_NAME\"\n";
+		};
+		8E7BF09E271E3DDA008D0F3B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 		AC4707536C66611156C72488 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
