@@ -48,7 +48,6 @@
 				738C36A29576B6A2BCA7CCC4 /* Pods-RxCocoaMVVMExampleLoginForm.debug.xcconfig */,
 				9F175455BECB2F7C84DE75E0 /* Pods-RxCocoaMVVMExampleLoginForm.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -100,6 +99,7 @@
 			buildConfigurationList = 8ED54368271E36A000BB02D5 /* Build configuration list for PBXNativeTarget "RxCocoaMVVMExampleLoginForm" */;
 			buildPhases = (
 				DC2C3FC951BEC536441C2CCF /* [CP] Check Pods Manifest.lock */,
+				8E7BF09D271E3D9F008D0F3B /* SwiftFormat */,
 				8ED54350271E369E00BB02D5 /* Sources */,
 				8ED54351271E369E00BB02D5 /* Frameworks */,
 				8ED54352271E369E00BB02D5 /* Resources */,
@@ -161,6 +161,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8E7BF09D271E3D9F008D0F3B /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat --verbose \"$PROJECT_DIR/$TARGET_NAME\"\n";
+		};
 		AC4707536C66611156C72488 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
