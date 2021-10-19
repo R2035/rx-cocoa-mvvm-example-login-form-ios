@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="-1168" y="-1233"/>
         </scene>
-        <!--ログイン-->
+        <!--Login-->
         <scene sceneID="9GT-OF-QxF">
             <objects>
                 <tableViewController id="gSa-bo-fq2" customClass="LoginViewController" customModule="RxCocoaMVVMExampleLoginForm" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,7 +62,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dZ-eR-1Ly">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3dZ-eR-1Ly">
                                                     <rect key="frame" x="16" y="0.0" width="382" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -86,7 +86,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTs-dB-a6a">
                                                     <rect key="frame" x="16" y="16" width="382" height="31"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="ログイン"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -105,7 +105,7 @@
                             <outlet property="delegate" destination="gSa-bo-fq2" id="RmR-ZJ-5HE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ログイン" id="ik2-SL-fLB"/>
+                    <navigationItem key="navigationItem" title="Login" id="ik2-SL-fLB"/>
                     <connections>
                         <outlet property="idTextField" destination="m3J-hm-lnV" id="Fbv-ob-ZD0"/>
                         <outlet property="loginButton" destination="ZTs-dB-a6a" id="8R7-ac-QWA"/>
