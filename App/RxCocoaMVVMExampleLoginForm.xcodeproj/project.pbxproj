@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E7BF0A0271E3EE9008D0F3B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7BF09F271E3EE9008D0F3B /* LoginViewModel.swift */; };
 		8ED54358271E369E00BB02D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED54357271E369E00BB02D5 /* AppDelegate.swift */; };
 		8ED5435A271E369E00BB02D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED54359271E369E00BB02D5 /* SceneDelegate.swift */; };
 		8ED5435C271E369E00BB02D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED5435B271E369E00BB02D5 /* LoginViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		4A5DCBE663417C5E0175771F /* Pods_RxCocoaMVVMExampleLoginForm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxCocoaMVVMExampleLoginForm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		738C36A29576B6A2BCA7CCC4 /* Pods-RxCocoaMVVMExampleLoginForm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCocoaMVVMExampleLoginForm.debug.xcconfig"; path = "Target Support Files/Pods-RxCocoaMVVMExampleLoginForm/Pods-RxCocoaMVVMExampleLoginForm.debug.xcconfig"; sourceTree = "<group>"; };
+		8E7BF09F271E3EE9008D0F3B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8ED54354271E369E00BB02D5 /* RxCocoaMVVMExampleLoginForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxCocoaMVVMExampleLoginForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED54357271E369E00BB02D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8ED54359271E369E00BB02D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				8ED54357271E369E00BB02D5 /* AppDelegate.swift */,
 				8ED54359271E369E00BB02D5 /* SceneDelegate.swift */,
 				8ED5435B271E369E00BB02D5 /* LoginViewController.swift */,
+				8E7BF09F271E3EE9008D0F3B /* LoginViewModel.swift */,
 				8ED5435D271E369E00BB02D5 /* Main.storyboard */,
 				8ED54360271E36A000BB02D5 /* Assets.xcassets */,
 				8ED54362271E36A000BB02D5 /* LaunchScreen.storyboard */,
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7BF0A0271E3EE9008D0F3B /* LoginViewModel.swift in Sources */,
 				8ED5435C271E369E00BB02D5 /* LoginViewController.swift in Sources */,
 				8ED54358271E369E00BB02D5 /* AppDelegate.swift in Sources */,
 				8ED5435A271E369E00BB02D5 /* SceneDelegate.swift in Sources */,
