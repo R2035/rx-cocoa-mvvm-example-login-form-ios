@@ -6,8 +6,6 @@ target 'RxCocoaMVVMExampleLoginForm' do
 
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'SnapKit'
   pod 'SwiftFormat/CLI'
-  pod 'SwiftGen'
   pod 'SwiftLint'
 end
