@@ -16,7 +16,7 @@ final class LoginViewController: UITableViewController {
 
     @IBOutlet private var loginButton: UIButton!
 
-    private let viewModel = LoginViewModel()
+    private let viewModel: LoginViewModel = AppDelegate.assembler.resolver.resolve()
 
     private let disposeBag = DisposeBag()
 

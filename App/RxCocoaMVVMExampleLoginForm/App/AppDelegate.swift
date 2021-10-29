@@ -5,10 +5,21 @@
 //  Created by oe on 2021/10/19.
 //
 
+import Swinject
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    private static let container = Container()
+
+    static let assembler: Assembler = {
+        let assembler = Assembler(container: container)
+        assembler.apply(assemblies: [
+            AppAssembly(),
+        ])
+        return assembler
+    }()
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         true
