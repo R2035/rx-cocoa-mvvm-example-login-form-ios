@@ -53,6 +53,43 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8E52034D272CBAC100D25830 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8ED54357271E369E00BB02D5 /* AppDelegate.swift */,
+				8ED54359271E369E00BB02D5 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8E52034E272CBACA00D25830 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				8E52034F272CBAD000D25830 /* Login */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		8E52034F272CBAD000D25830 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8ED5435B271E369E00BB02D5 /* LoginViewController.swift */,
+				8E7BF09F271E3EE9008D0F3B /* LoginViewModel.swift */,
+				8ED5435D271E369E00BB02D5 /* Main.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8E520353272CBB4200D25830 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8ED54360271E36A000BB02D5 /* Assets.xcassets */,
+				8ED54362271E36A000BB02D5 /* LaunchScreen.storyboard */,
+				8ED54365271E36A000BB02D5 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		8ED5434B271E369E00BB02D5 = {
 			isa = PBXGroup;
 			children = (
@@ -74,14 +111,9 @@
 		8ED54356271E369E00BB02D5 /* RxCocoaMVVMExampleLoginForm */ = {
 			isa = PBXGroup;
 			children = (
-				8ED54357271E369E00BB02D5 /* AppDelegate.swift */,
-				8ED54359271E369E00BB02D5 /* SceneDelegate.swift */,
-				8ED5435B271E369E00BB02D5 /* LoginViewController.swift */,
-				8E7BF09F271E3EE9008D0F3B /* LoginViewModel.swift */,
-				8ED5435D271E369E00BB02D5 /* Main.storyboard */,
-				8ED54360271E36A000BB02D5 /* Assets.xcassets */,
-				8ED54362271E36A000BB02D5 /* LaunchScreen.storyboard */,
-				8ED54365271E36A000BB02D5 /* Info.plist */,
+				8E52034D272CBAC100D25830 /* App */,
+				8E52034E272CBACA00D25830 /* Screen */,
+				8E520353272CBB4200D25830 /* Resource */,
 			);
 			path = RxCocoaMVVMExampleLoginForm;
 			sourceTree = "<group>";
@@ -401,7 +433,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RxCocoaMVVMExampleLoginForm/Info.plist;
+				INFOPLIST_FILE = RxCocoaMVVMExampleLoginForm/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -429,7 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RxCocoaMVVMExampleLoginForm/Info.plist;
+				INFOPLIST_FILE = RxCocoaMVVMExampleLoginForm/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
