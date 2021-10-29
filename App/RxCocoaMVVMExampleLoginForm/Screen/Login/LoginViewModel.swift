@@ -42,9 +42,3 @@ struct LoginViewModel {
         !id.isNilOrEmpty && !password.isNilOrEmpty
     }
 }
-
-private extension Optional where Wrapped == String {
-    var isNilOrEmpty: Bool {
-        self?.isEmpty ?? true
-    }
-}

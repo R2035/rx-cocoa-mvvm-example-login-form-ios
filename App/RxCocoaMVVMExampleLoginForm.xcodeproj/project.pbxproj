@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8E520356272CBCFF00D25830 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E520355272CBCFF00D25830 /* AppAssembly.swift */; };
 		8E520359272CBDA400D25830 /* Resolver+resolve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E520358272CBDA400D25830 /* Resolver+resolve.swift */; };
+		8E52035B272CBDFC00D25830 /* String?+isNilOrEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E52035A272CBDFC00D25830 /* String?+isNilOrEmpty.swift */; };
 		8E7BF0A0271E3EE9008D0F3B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7BF09F271E3EE9008D0F3B /* LoginViewModel.swift */; };
 		8ED54358271E369E00BB02D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED54357271E369E00BB02D5 /* AppDelegate.swift */; };
 		8ED5435A271E369E00BB02D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED54359271E369E00BB02D5 /* SceneDelegate.swift */; };
@@ -24,6 +25,7 @@
 		738C36A29576B6A2BCA7CCC4 /* Pods-RxCocoaMVVMExampleLoginForm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCocoaMVVMExampleLoginForm.debug.xcconfig"; path = "Target Support Files/Pods-RxCocoaMVVMExampleLoginForm/Pods-RxCocoaMVVMExampleLoginForm.debug.xcconfig"; sourceTree = "<group>"; };
 		8E520355272CBCFF00D25830 /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		8E520358272CBDA400D25830 /* Resolver+resolve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+resolve.swift"; sourceTree = "<group>"; };
+		8E52035A272CBDFC00D25830 /* String?+isNilOrEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String?+isNilOrEmpty.swift"; sourceTree = "<group>"; };
 		8E7BF09F271E3EE9008D0F3B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8ED54354271E369E00BB02D5 /* RxCocoaMVVMExampleLoginForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxCocoaMVVMExampleLoginForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED54357271E369E00BB02D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				8E520358272CBDA400D25830 /* Resolver+resolve.swift */,
+				8E52035A272CBDFC00D25830 /* String?+isNilOrEmpty.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				8E520356272CBCFF00D25830 /* AppAssembly.swift in Sources */,
 				8E520359272CBDA400D25830 /* Resolver+resolve.swift in Sources */,
 				8ED5435C271E369E00BB02D5 /* LoginViewController.swift in Sources */,
+				8E52035B272CBDFC00D25830 /* String?+isNilOrEmpty.swift in Sources */,
 				8ED54358271E369E00BB02D5 /* AppDelegate.swift in Sources */,
 				8ED5435A271E369E00BB02D5 /* SceneDelegate.swift in Sources */,
 			);
