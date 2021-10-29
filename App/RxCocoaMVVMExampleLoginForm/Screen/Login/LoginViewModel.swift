@@ -8,6 +8,7 @@
 import Foundation
 import RxCocoa
 import RxSwift
+import UIKit
 
 struct LoginViewModel {
     struct Input {
@@ -20,6 +21,12 @@ struct LoginViewModel {
         let id: Driver<String?>
         let password: Driver<String?>
         let isLoginButtonEnabled: Driver<Bool>
+    }
+
+    private let exampleApi: ExampleApi
+
+    init(exampleApi: ExampleApi) {
+        self.exampleApi = exampleApi
     }
 
     func tranform(input: Input) -> Output {

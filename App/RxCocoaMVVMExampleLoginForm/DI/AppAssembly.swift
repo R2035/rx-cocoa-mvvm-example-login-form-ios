@@ -12,8 +12,12 @@ final class AppAssembly: Assembly {
     // MARK: Assembly
 
     public func assemble(container: Container) {
-        container.register(LoginViewModel.self) { _ in
-            LoginViewModel()
+        container.register(LoginViewModel.self) { resolver in
+            LoginViewModel(exampleApi: resolver.resolve())
+        }
+
+        container.register(ExampleApi.self) { _ in
+            ExampleApiStub()
         }
     }
 }
