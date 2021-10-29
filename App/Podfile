@@ -5,7 +5,10 @@ target 'RxCocoaMVVMExampleLoginForm' do
   inhibit_all_warnings!
 
   pod 'RxSwift'
+  pod 'RxSwiftExt'
   pod 'RxCocoa'
+  pod 'SVProgressHUD'
   pod 'SwiftFormat/CLI'
   pod 'SwiftLint'
+  pod 'Swinject'
 end
