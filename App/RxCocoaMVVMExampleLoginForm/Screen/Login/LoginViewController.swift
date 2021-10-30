@@ -34,5 +34,26 @@ final class LoginViewController: UITableViewController {
         output.password.drive(passwordTextField.rx.text).disposed(by: disposeBag)
 
         output.isLoginButtonEnabled.drive(loginButton.rx.isEnabled).disposed(by: disposeBag)
+
+        output.alert.emit { [weak self] alert in
+            self?.present(alert: alert)
+        }.disposed(by: disposeBag)
+    }
+
+    private func present(alert: Alert) {
+        switch alert {
+        case .loginSucceeded:
+            let alertController = UIAlertController(title: nil, message: "成功", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                alertController.dismiss(animated: true)
+            }))
+            present(alertController, animated: true)
+        case .loginFailed:
+            let alertController = UIAlertController(title: nil, message: "失敗", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                alertController.dismiss(animated: true)
+            }))
+            present(alertController, animated: true)
+        }
     }
 }
