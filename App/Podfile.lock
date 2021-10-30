@@ -1,4 +1,5 @@
 PODS:
+  - JGProgressHUD (2.2)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
@@ -13,41 +14,40 @@ PODS:
   - RxSwiftExt/RxCocoa (6.0.1):
     - RxCocoa (~> 6.0)
     - RxSwiftExt/Core
-  - SVProgressHUD (2.2.5)
   - SwiftFormat/CLI (0.48.16)
   - SwiftLint (0.44.0)
   - Swinject (2.8.1)
 
 DEPENDENCIES:
+  - JGProgressHUD
   - RxCocoa
   - RxSwift
   - RxSwiftExt
-  - SVProgressHUD
   - SwiftFormat/CLI
   - SwiftLint
   - Swinject
 
 SPEC REPOS:
   trunk:
+    - JGProgressHUD
     - RxCocoa
     - RxRelay
     - RxSwift
     - RxSwiftExt
-    - SVProgressHUD
     - SwiftFormat
     - SwiftLint
     - Swinject
 
 SPEC CHECKSUMS:
+  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   RxSwiftExt: d61c4b9b06e0a448041b1c659e0f1b5c5a035afc
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftFormat: b8a60419c4a8680f67faa80e2da710fd9dc85ca5
   SwiftLint: e96c0a8c770c7ebbc4d36c55baf9096bb65c4584
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
 
-PODFILE CHECKSUM: 56a9d2f0a726ccde80a25c56c7080d601aad49f2
+PODFILE CHECKSUM: 55a6e7df42cbf3cb55ce68daae2d4add0b339203
 
 COCOAPODS: 1.11.2

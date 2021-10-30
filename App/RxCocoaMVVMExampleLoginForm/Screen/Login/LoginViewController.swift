@@ -5,6 +5,7 @@
 //  Created by oe on 2021/10/19.
 //
 
+import JGProgressHUD
 import RxCocoa
 import RxSwift
 import UIKit
@@ -19,6 +20,8 @@ final class LoginViewController: UITableViewController {
     private let viewModel: LoginViewModel = AppDelegate.assembler.resolver.resolve()
 
     private let disposeBag = DisposeBag()
+
+    private let hud = JGProgressHUD()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +38,17 @@ final class LoginViewController: UITableViewController {
 
         output.isLoginButtonEnabled.drive(loginButton.rx.isEnabled).disposed(by: disposeBag)
 
-        output.alert.emit { [weak self] alert in
+        output.alert.emit(onNext: { [weak self] alert in
             self?.present(alert: alert)
-        }.disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
+
+        output.showProgress.emit(onNext: { [weak self] in
+            self?.showProgress()
+        }).disposed(by: disposeBag)
+
+        output.dismissProgress.emit(onNext: { [weak self] in
+            self?.dismissProgress()
+        }).disposed(by: disposeBag)
     }
 
     private func present(alert: Alert) {
@@ -55,5 +66,13 @@ final class LoginViewController: UITableViewController {
             }))
             present(alertController, animated: true)
         }
+    }
+
+    private func showProgress() {
+        hud.show(in: view)
+    }
+
+    private func dismissProgress() {
+        hud.dismiss()
     }
 }

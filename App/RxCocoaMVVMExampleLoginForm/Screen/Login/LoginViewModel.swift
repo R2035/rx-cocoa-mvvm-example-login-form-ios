@@ -23,6 +23,8 @@ struct LoginViewModel {
         let password: Driver<String?>
         let isLoginButtonEnabled: Driver<Bool>
         let alert: Signal<Alert>
+        let showProgress: Signal<Void>
+        let dismissProgress: Signal<Void>
     }
 
     private let exampleApi: ExampleApi
@@ -43,18 +45,27 @@ struct LoginViewModel {
         let idAndPassword = Observable
             .combineLatest(input.id.unwrap(), input.password.unwrap())
 
-        let alert = input.loginButtonTap
+        let loginApiResult = input.loginButtonTap
             .withLatestFrom(idAndPassword) { $1 }
             .flatMapLatest { id, password in
-                exampleApi.login(id: id, password: password).map(LoginViewModel.alert(for:))
+                exampleApi.login(id: id, password: password)
             }
+
+        let alert = loginApiResult
+            .map(LoginViewModel.alert(for:))
             .asSignal(onErrorSignalWith: .empty())
+
+        let showProgress = input.loginButtonTap.asSignal(onErrorSignalWith: .empty())
+
+        let dismissProgress = loginApiResult.mapTo(()).asSignal(onErrorSignalWith: .empty())
 
         return Output(
             id: id,
             password: password,
             isLoginButtonEnabled: isLoginButtonEnabled,
-            alert: alert
+            alert: alert,
+            showProgress: showProgress,
+            dismissProgress: dismissProgress
         )
     }
 

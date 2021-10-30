@@ -7,7 +7,7 @@ target 'RxCocoaMVVMExampleLoginForm' do
   pod 'RxSwift'
   pod 'RxSwiftExt'
   pod 'RxCocoa'
-  pod 'SVProgressHUD'
+  pod 'JGProgressHUD'
   pod 'SwiftFormat/CLI'
   pod 'SwiftLint'
   pod 'Swinject'
