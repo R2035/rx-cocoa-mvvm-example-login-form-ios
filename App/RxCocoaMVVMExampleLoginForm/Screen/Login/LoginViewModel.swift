@@ -34,9 +34,11 @@ struct LoginViewModel {
     }
 
     func tranform(input: Input) -> Output {
-        let id = input.id.asDriver(onErrorDriveWith: .empty())
+        let id = input.id
+            .asDriver(onErrorDriveWith: .empty())
 
-        let password = input.password.asDriver(onErrorDriveWith: .empty())
+        let password = input.password
+            .asDriver(onErrorDriveWith: .empty())
 
         let isLoginButtonEnabled = Observable
             .combineLatest(input.id, input.password, resultSelector: LoginViewModel.validate)
@@ -55,9 +57,12 @@ struct LoginViewModel {
             .map(LoginViewModel.alert(for:))
             .asSignal(onErrorSignalWith: .empty())
 
-        let showProgress = input.loginButtonTap.asSignal(onErrorSignalWith: .empty())
+        let showProgress = input.loginButtonTap
+            .asSignal(onErrorSignalWith: .empty())
 
-        let dismissProgress = loginApiResult.mapTo(()).asSignal(onErrorSignalWith: .empty())
+        let dismissProgress = loginApiResult
+            .mapTo(())
+            .asSignal(onErrorSignalWith: .empty())
 
         return Output(
             id: id,
