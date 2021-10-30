@@ -13,6 +13,7 @@
 		8E52035E272CBE8400D25830 /* ExampleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E52035D272CBE8400D25830 /* ExampleApi.swift */; };
 		8E520360272CBE8E00D25830 /* ExampleApiStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E52035F272CBE8E00D25830 /* ExampleApiStub.swift */; };
 		8E520362272CBF0E00D25830 /* ExampleApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E520361272CBF0E00D25830 /* ExampleApiResult.swift */; };
+		8E520365272CC0E300D25830 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E520364272CC0E300D25830 /* Alert.swift */; };
 		8E7BF0A0271E3EE9008D0F3B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7BF09F271E3EE9008D0F3B /* LoginViewModel.swift */; };
 		8ED54358271E369E00BB02D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED54357271E369E00BB02D5 /* AppDelegate.swift */; };
 		8ED5435A271E369E00BB02D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED54359271E369E00BB02D5 /* SceneDelegate.swift */; };
@@ -32,6 +33,7 @@
 		8E52035D272CBE8400D25830 /* ExampleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApi.swift; sourceTree = "<group>"; };
 		8E52035F272CBE8E00D25830 /* ExampleApiStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApiStub.swift; sourceTree = "<group>"; };
 		8E520361272CBF0E00D25830 /* ExampleApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApiResult.swift; sourceTree = "<group>"; };
+		8E520364272CC0E300D25830 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		8E7BF09F271E3EE9008D0F3B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8ED54354271E369E00BB02D5 /* RxCocoaMVVMExampleLoginForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxCocoaMVVMExampleLoginForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED54357271E369E00BB02D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,14 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
+		8E520363272CC0D500D25830 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E520364272CC0E300D25830 /* Alert.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8ED5434B271E369E00BB02D5 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +164,7 @@
 				8E52034D272CBAC100D25830 /* App */,
 				8E520354272CBCF100D25830 /* DI */,
 				8E520357272CBD8500D25830 /* Extension */,
+				8E520363272CC0D500D25830 /* Model */,
 				8E52034E272CBACA00D25830 /* Screen */,
 				8E520353272CBB4200D25830 /* Resource */,
 			);
@@ -329,6 +340,7 @@
 				8ED5435C271E369E00BB02D5 /* LoginViewController.swift in Sources */,
 				8E52035B272CBDFC00D25830 /* String?+isNilOrEmpty.swift in Sources */,
 				8ED54358271E369E00BB02D5 /* AppDelegate.swift in Sources */,
+				8E520365272CC0E300D25830 /* Alert.swift in Sources */,
 				8E520362272CBF0E00D25830 /* ExampleApiResult.swift in Sources */,
 				8ED5435A271E369E00BB02D5 /* SceneDelegate.swift in Sources */,
 			);

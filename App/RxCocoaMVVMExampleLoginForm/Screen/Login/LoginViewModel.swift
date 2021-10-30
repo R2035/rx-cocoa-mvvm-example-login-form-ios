@@ -8,6 +8,7 @@
 import Foundation
 import RxCocoa
 import RxSwift
+import RxSwiftExt
 import UIKit
 
 struct LoginViewModel {
@@ -21,6 +22,7 @@ struct LoginViewModel {
         let id: Driver<String?>
         let password: Driver<String?>
         let isLoginButtonEnabled: Driver<Bool>
+        let alert: Signal<Alert>
     }
 
     private let exampleApi: ExampleApi
@@ -38,14 +40,35 @@ struct LoginViewModel {
             LoginViewModel.validate(id: id, password: password)
         }.asDriver(onErrorDriveWith: .empty())
 
+        let idAndPassword = Observable.combineLatest(input.id.unwrap(), input.password.unwrap())
+
+        let alert = input.loginButtonTap
+            .withLatestFrom(idAndPassword) { _, idAndPassword in
+                idAndPassword
+            }
+            .flatMapLatest { id, password in
+                exampleApi.login(id: id, password: password).map(LoginViewModel.alert(for:))
+            }
+            .asSignal(onErrorSignalWith: .empty())
+
         return Output(
             id: id,
             password: password,
-            isLoginButtonEnabled: isLoginButtonEnabled
+            isLoginButtonEnabled: isLoginButtonEnabled,
+            alert: alert
         )
     }
 
     private static func validate(id: String?, password: String?) -> Bool {
         !id.isNilOrEmpty && !password.isNilOrEmpty
+    }
+
+    private static func alert(for apiResult: ExampleApiResult) -> Alert {
+        switch apiResult {
+        case .succeeded:
+            return .loginSucceeded
+        case .failed:
+            return .loginFailed
+        }
     }
 }
