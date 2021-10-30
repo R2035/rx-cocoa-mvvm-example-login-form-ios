@@ -42,6 +42,7 @@ struct LoginViewModel {
 
         let isLoginButtonEnabled = Observable
             .combineLatest(input.id, input.password, resultSelector: LoginViewModel.validate)
+            .distinctUntilChanged()
             .asDriver(onErrorDriveWith: .empty())
 
         let idAndPassword = Observable
