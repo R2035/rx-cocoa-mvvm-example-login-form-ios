@@ -36,16 +36,15 @@ struct LoginViewModel {
 
         let password = input.password.asDriver(onErrorDriveWith: .empty())
 
-        let isLoginButtonEnabled = Observable.combineLatest(input.id, input.password) { id, password in
-            LoginViewModel.validate(id: id, password: password)
-        }.asDriver(onErrorDriveWith: .empty())
+        let isLoginButtonEnabled = Observable
+            .combineLatest(input.id, input.password, resultSelector: LoginViewModel.validate)
+            .asDriver(onErrorDriveWith: .empty())
 
-        let idAndPassword = Observable.combineLatest(input.id.unwrap(), input.password.unwrap())
+        let idAndPassword = Observable
+            .combineLatest(input.id.unwrap(), input.password.unwrap())
 
         let alert = input.loginButtonTap
-            .withLatestFrom(idAndPassword) { _, idAndPassword in
-                idAndPassword
-            }
+            .withLatestFrom(idAndPassword) { $1 }
             .flatMapLatest { id, password in
                 exampleApi.login(id: id, password: password).map(LoginViewModel.alert(for:))
             }
