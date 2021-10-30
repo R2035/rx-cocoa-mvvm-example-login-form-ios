@@ -32,23 +32,35 @@ final class LoginViewController: UITableViewController {
             loginButtonTap: loginButton.rx.tap.asObservable()
         ))
 
-        output.id.drive(idTextField.rx.text).disposed(by: disposeBag)
+        output.id
+            .drive(idTextField.rx.text)
+            .disposed(by: disposeBag)
 
-        output.password.drive(passwordTextField.rx.text).disposed(by: disposeBag)
+        output
+            .password.drive(passwordTextField.rx.text)
+            .disposed(by: disposeBag)
 
-        output.isLoginButtonEnabled.drive(loginButton.rx.isEnabled).disposed(by: disposeBag)
+        output.isLoginButtonEnabled
+            .drive(loginButton.rx.isEnabled)
+            .disposed(by: disposeBag)
 
-        output.alert.emit(onNext: { [weak self] alert in
-            self?.present(alert: alert)
-        }).disposed(by: disposeBag)
+        output.alert
+            .emit(onNext: { [weak self] alert in
+                self?.present(alert: alert)
+            })
+            .disposed(by: disposeBag)
 
-        output.showProgress.emit(onNext: { [weak self] in
-            self?.showProgress()
-        }).disposed(by: disposeBag)
+        output.showProgress
+            .emit(onNext: { [weak self] in
+                self?.showProgress()
+            })
+            .disposed(by: disposeBag)
 
-        output.dismissProgress.emit(onNext: { [weak self] in
-            self?.dismissProgress()
-        }).disposed(by: disposeBag)
+        output.dismissProgress
+            .emit(onNext: { [weak self] in
+                self?.dismissProgress()
+            })
+            .disposed(by: disposeBag)
     }
 
     private func present(alert: Alert) {
