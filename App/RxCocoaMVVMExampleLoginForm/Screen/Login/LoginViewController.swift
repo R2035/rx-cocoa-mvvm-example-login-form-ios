@@ -44,7 +44,7 @@ final class LoginViewController: UITableViewController {
             .drive(loginButton.rx.isEnabled)
             .disposed(by: disposeBag)
 
-        output.alert
+        output.presentAlert
             .emit(onNext: { [weak self] alert in
                 self?.present(alert: alert)
             })

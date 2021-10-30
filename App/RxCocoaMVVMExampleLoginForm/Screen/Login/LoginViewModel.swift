@@ -22,7 +22,7 @@ struct LoginViewModel {
         let id: Driver<String?>
         let password: Driver<String?>
         let isLoginButtonEnabled: Driver<Bool>
-        let alert: Signal<Alert>
+        let presentAlert: Signal<Alert>
         let showProgress: Signal<Void>
         let dismissProgress: Signal<Void>
     }
@@ -63,7 +63,7 @@ struct LoginViewModel {
             id: id,
             password: password,
             isLoginButtonEnabled: isLoginButtonEnabled,
-            alert: alert,
+            presentAlert: alert,
             showProgress: showProgress,
             dismissProgress: dismissProgress
         )
