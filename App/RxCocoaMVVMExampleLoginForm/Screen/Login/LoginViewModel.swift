@@ -52,6 +52,7 @@ struct LoginViewModel {
             .flatMapLatest { id, password in
                 exampleApi.login(id: id, password: password)
             }
+            .share(replay: 1, scope: .whileConnected)
 
         let alert = loginApiResult
             .map(LoginViewModel.alert(for:))
