@@ -14,6 +14,8 @@
 		8E520360272CBE8E00D25830 /* ExampleApiStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E52035F272CBE8E00D25830 /* ExampleApiStub.swift */; };
 		8E520362272CBF0E00D25830 /* ExampleApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E520361272CBF0E00D25830 /* ExampleApiResult.swift */; };
 		8E520365272CC0E300D25830 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E520364272CC0E300D25830 /* Alert.swift */; };
+		8E520369272CD79300D25830 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E520368272CD79300D25830 /* Localizable.strings */; };
+		8E52036B272CD7DA00D25830 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E52036A272CD7DA00D25830 /* Strings.swift */; };
 		8E7BF0A0271E3EE9008D0F3B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7BF09F271E3EE9008D0F3B /* LoginViewModel.swift */; };
 		8ED54358271E369E00BB02D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED54357271E369E00BB02D5 /* AppDelegate.swift */; };
 		8ED5435A271E369E00BB02D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED54359271E369E00BB02D5 /* SceneDelegate.swift */; };
@@ -34,6 +36,8 @@
 		8E52035F272CBE8E00D25830 /* ExampleApiStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApiStub.swift; sourceTree = "<group>"; };
 		8E520361272CBF0E00D25830 /* ExampleApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApiResult.swift; sourceTree = "<group>"; };
 		8E520364272CC0E300D25830 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		8E520368272CD79300D25830 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		8E52036A272CD7DA00D25830 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		8E7BF09F271E3EE9008D0F3B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8ED54354271E369E00BB02D5 /* RxCocoaMVVMExampleLoginForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxCocoaMVVMExampleLoginForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED54357271E369E00BB02D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,9 +101,11 @@
 		8E520353272CBB4200D25830 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8E52036A272CD7DA00D25830 /* Strings.swift */,
 				8ED54360271E36A000BB02D5 /* Assets.xcassets */,
 				8ED54362271E36A000BB02D5 /* LaunchScreen.storyboard */,
 				8ED54365271E36A000BB02D5 /* Info.plist */,
+				8E520368272CD79300D25830 /* Localizable.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				8ED54351271E369E00BB02D5 /* Frameworks */,
 				8ED54352271E369E00BB02D5 /* Resources */,
 				AC4707536C66611156C72488 /* [CP] Embed Pods Frameworks */,
+				8E520367272CD73B00D25830 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -242,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED54364271E36A000BB02D5 /* LaunchScreen.storyboard in Resources */,
+				8E520369272CD79300D25830 /* Localizable.strings in Resources */,
 				8ED54361271E36A000BB02D5 /* Assets.xcassets in Resources */,
 				8ED5435F271E369E00BB02D5 /* Login.storyboard in Resources */,
 			);
@@ -250,6 +258,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8E520367272CD73B00D25830 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SWIFTGEN=\"${SRCROOT}/Pods/SwiftGen/bin/swiftgen\"\nSWIFTGEN_TEMPLATE_DIR=\"${SRCROOT}/Pods/SwiftGen/templates/\"\nif which $SWIFTGEN >/dev/null; then\n$SWIFTGEN config run --config \"$PROJECT_DIR/swiftgen.yml\"\nelse\necho \"warning: SwiftGen doesn't exist.\"\nfi\n";
+		};
 		8E7BF09D271E3D9F008D0F3B /* SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -342,6 +368,7 @@
 				8ED54358271E369E00BB02D5 /* AppDelegate.swift in Sources */,
 				8E520365272CC0E300D25830 /* Alert.swift in Sources */,
 				8E520362272CBF0E00D25830 /* ExampleApiResult.swift in Sources */,
+				8E52036B272CD7DA00D25830 /* Strings.swift in Sources */,
 				8ED5435A271E369E00BB02D5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

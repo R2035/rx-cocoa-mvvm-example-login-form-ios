@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  RxCocoaMVVMExampleLoginForm
+
+  Created by oe on 2021/10/30.
+  
+*/
+
+"Login.Succeeded" = "ログイン成功";
+"Login.Failed" = "ログイン失敗";
+"Login.OK" = "OK";

@@ -66,12 +66,12 @@ final class LoginViewController: UITableViewController {
     private func present(alert: Alert) {
         switch alert {
         case .loginSucceeded:
-            let alertController = UIAlertController(title: nil, message: "成功", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            let alertController = UIAlertController(title: nil, message: L10n.Login.succeeded, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: L10n.Login.ok, style: .default))
             present(alertController, animated: true)
         case .loginFailed:
-            let alertController = UIAlertController(title: nil, message: "失敗", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            let alertController = UIAlertController(title: nil, message: L10n.Login.failed, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: L10n.Login.ok, style: .default))
             present(alertController, animated: true)
         }
     }

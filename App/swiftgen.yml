@@ -1,0 +1,7 @@
+input_dir: RxCocoaMVVMExampleLoginForm
+output_dir: RxCocoaMVVMExampleLoginForm/Resource
+strings:
+  inputs: Resource/Localizable.strings
+  outputs:
+    templateName: structured-swift5
+    output: Strings.swift
